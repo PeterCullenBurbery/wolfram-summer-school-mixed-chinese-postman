@@ -10,34 +10,211 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1726,         55]
-NotebookOptionsPosition[      1213,         37]
-NotebookOutlinePosition[      1651,         54]
-CellTagsIndexPosition[      1608,         51]
+NotebookDataLength[      9340,        264]
+NotebookOptionsPosition[      7152,        213]
+NotebookOutlinePosition[      7621,        231]
+CellTagsIndexPosition[      7578,        228]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["Basic Examples", "Section",
+ CellChangeTimes->{{3.8662064893207693`*^9, 
+  3.866206491029773*^9}},ExpressionUUID->"0eb279a9-873b-4a18-9438-\
+8e365ab1d504"],
+
+Cell[CellGroupData[{
+
+Cell["", "SubsubitemNumbered",
+ CellChangeTimes->{{3.866206498864786*^9, 
+  3.8662065086867847`*^9}},ExpressionUUID->"7c3d70b8-eb5e-4be0-8b92-\
+82b9430f0c3a"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{
   "StringTemplate", "[", 
-   "\"\<Minimize <* RandomInteger[20] *>x+<*RandomInteger[20]*>y subject to \
-the constraints\n\>\"", "]"}], "[", "]"}]], "Input",
- CellChangeTimes->{{3.866206183399316*^9, 3.8662062799852743`*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
+   "\"\<Minimize <* RandomInteger[20] *>x+<* RandomInteger[20] *>y subject to \
+the constraints <* RandomInteger[20] *>x+<* RandomInteger[20] *>y\
+\[GreaterEqual]<* RandomInteger[20] *>, x\[GreaterEqual]0, \
+y\[GreaterEqual]0\>\"", "]"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.866206183399316*^9, 3.8662062799852743`*^9}, {
+  3.866206326278767*^9, 3.8662064450127673`*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
 
-Cell[BoxData["\<\"Minimize 5x+5y subject to the constraints\\n\"\>"], "Output",
+Cell[BoxData["\<\"Minimize 1x+5y subject to the constraints 7x+9y\
+\[GreaterEqual]19, x\[GreaterEqual]0, y\[GreaterEqual]0\"\>"], "Output",
  CellChangeTimes->{{3.866206198661309*^9, 3.866206232411559*^9}, 
-   3.8662062648036575`*^9, 3.8662063020446606`*^9},
- CellLabel->"Out[13]=",ExpressionUUID->"6fd2d6ab-4002-4119-b5c6-c25047e119b2"]
+   3.8662062648036575`*^9, 3.8662063020446606`*^9, 3.8662063382667627`*^9, {
+   3.866206390536773*^9, 3.866206445413767*^9}},
+ CellLabel->"Out[20]=",ExpressionUUID->"3661c59d-973e-45fa-8d2c-22be4176b717"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LinearOptimization", "[", 
+  RowBox[{
+   RowBox[{"x", "+", 
+    RowBox[{"5", "y"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"7", "x"}], "+", 
+       RowBox[{"9", "y"}]}], ">=", "19"}], ",", 
+     RowBox[{"x", ">=", "0"}], ",", 
+     RowBox[{"y", ">=", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8662064524097724`*^9, 3.866206470687774*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"4f6c0107-ece7-4554-bca8-9b2ea6db79ec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"x", "\[Rule]", 
+    FractionBox["19", "7"]}], ",", 
+   RowBox[{"y", "\[Rule]", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8662064711747723`*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"e0a3f9bc-6946-4102-be8e-1ac62e5b7a13"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SubsubitemNumbered",
+ CellChangeTimes->{{3.866206498864786*^9, 
+  3.8662065086867847`*^9}},ExpressionUUID->"8b9241e5-8c38-4fc5-819e-\
+747806aa6a48"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "StringTemplate", "[", 
+   "\"\<Minimize <* RandomInteger[20] *>x+<* RandomInteger[20] *>y subject to \
+the constraints <* RandomInteger[20] *>x+<* RandomInteger[20] *>y\
+\[GreaterEqual]<* RandomInteger[20] *>, x\[GreaterEqual]0, \
+y\[GreaterEqual]0\>\"", "]"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.866206183399316*^9, 3.8662062799852743`*^9}, {
+  3.866206326278767*^9, 3.8662064450127673`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"b8f505fc-fcfa-4c0e-a462-431e47f52423"],
+
+Cell[BoxData["\<\"Minimize 16x+3y subject to the constraints 2x+7y\
+\[GreaterEqual]19, x\[GreaterEqual]0, y\[GreaterEqual]0\"\>"], "Output",
+ CellChangeTimes->{{3.866206198661309*^9, 3.866206232411559*^9}, 
+   3.8662062648036575`*^9, 3.8662063020446606`*^9, 3.8662063382667627`*^9, {
+   3.866206390536773*^9, 3.866206445413767*^9}, 3.8662065383953304`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"cd9726a8-542a-407a-b019-a08bf45f61f3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LinearOptimization", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"16", "x"}], "+", 
+    RowBox[{"3", "y"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"2", "x"}], "+", 
+       RowBox[{"7", "y"}]}], ">=", "19"}], ",", 
+     RowBox[{"x", ">=", "0"}], ",", 
+     RowBox[{"y", ">=", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8662064524097724`*^9, 3.866206470687774*^9}, {
+  3.8662065432523212`*^9, 3.866206573512318*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"006cc79b-a6c9-41be-9e51-5d30040abbd1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"x", "\[Rule]", "0"}], ",", 
+   RowBox[{"y", "\[Rule]", 
+    FractionBox["19", "7"]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8662064711747723`*^9, {3.866206565050316*^9, 3.8662065738043137`*^9}},
+ CellLabel->"Out[24]=",ExpressionUUID->"285f664e-7e67-466a-a068-5ecc17fdc027"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SubsubitemNumbered",
+ CellChangeTimes->{{3.866206498864786*^9, 
+  3.8662065086867847`*^9}},ExpressionUUID->"e53aa23b-a1af-4b94-af49-\
+9506930a04db"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "StringTemplate", "[", 
+   "\"\<Minimize <* RandomInteger[20] *>x+<* RandomInteger[20] *>y subject to \
+the constraints <* RandomInteger[20] *>x+<* RandomInteger[20] *>y\
+\[GreaterEqual]<* RandomInteger[20] *>, x\[GreaterEqual]0, \
+y\[GreaterEqual]0\>\"", "]"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.866206183399316*^9, 3.8662062799852743`*^9}, {
+  3.866206326278767*^9, 3.8662064450127673`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"a1b01538-b900-4aab-bd50-6b3d7d36908f"],
+
+Cell[BoxData["\<\"Minimize 17x+12y subject to the constraints 19x+2y\
+\[GreaterEqual]7, x\[GreaterEqual]0, y\[GreaterEqual]0\"\>"], "Output",
+ CellChangeTimes->{{3.866206198661309*^9, 3.866206232411559*^9}, 
+   3.8662062648036575`*^9, 3.8662063020446606`*^9, 3.8662063382667627`*^9, {
+   3.866206390536773*^9, 3.866206445413767*^9}, 3.8662065870843143`*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"0109d507-868c-4711-a805-bbdb35a9cd5c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LinearOptimization", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"17", "x"}], "+", 
+    RowBox[{"12", "y"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"19", "x"}], "+", 
+       RowBox[{"2", "y"}]}], ">=", "7"}], ",", 
+     RowBox[{"x", ">=", "0"}], ",", 
+     RowBox[{"y", ">=", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8662064524097724`*^9, 3.866206470687774*^9}, {
+  3.866206591825325*^9, 3.8662066113963223`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"99c9d297-302b-438c-91b7-851141e9c679"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"x", "\[Rule]", 
+    FractionBox["7", "19"]}], ",", 
+   RowBox[{"y", "\[Rule]", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8662064711747723`*^9, 3.866206611723335*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"a2446210-1f95-469a-a70f-d87cc3153657"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1141.2, 604.8},
+WindowSize->{832.8, 604.8},
 WindowMargins->{{
-  Automatic, -393.5999999999999}, {-171.5999999999999, Automatic}},
+  Automatic, -70.79999999999995}, {-19.799999999999955`, Automatic}},
+Magnification:>1.1 Inherited,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"12f1ff60-9fa1-4ba4-b59b-b0cd4ec24a28"
@@ -54,8 +231,40 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 338, 7, 48, "Input",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
-Cell[921, 31, 276, 3, 52, "Output",ExpressionUUID->"6fd2d6ab-4002-4119-b5c6-c25047e119b2"]
+Cell[580, 22, 161, 3, 74, "Section",ExpressionUUID->"0eb279a9-873b-4a18-9438-8e365ab1d504"],
+Cell[CellGroupData[{
+Cell[766, 29, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"7c3d70b8-eb5e-4be0-8b92-82b9430f0c3a"],
+Cell[CellGroupData[{
+Cell[949, 36, 519, 10, 73, "Input",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
+Cell[1471, 48, 410, 5, 35, "Output",ExpressionUUID->"3661c59d-973e-45fa-8d2c-22be4176b717"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1918, 58, 558, 16, 31, "Input",ExpressionUUID->"4f6c0107-ece7-4554-bca8-9b2ea6db79ec"],
+Cell[2479, 76, 280, 7, 52, "Output",ExpressionUUID->"e0a3f9bc-6946-4102-be8e-1ac62e5b7a13"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2808, 89, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"8b9241e5-8c38-4fc5-819e-747806aa6a48"],
+Cell[CellGroupData[{
+Cell[2991, 96, 519, 10, 94, "Input",ExpressionUUID->"b8f505fc-fcfa-4c0e-a462-431e47f52423"],
+Cell[3513, 108, 435, 5, 35, "Output",ExpressionUUID->"cd9726a8-542a-407a-b019-a08bf45f61f3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3985, 118, 630, 18, 31, "Input",ExpressionUUID->"006cc79b-a6c9-41be-9e51-5d30040abbd1"],
+Cell[4618, 138, 331, 8, 52, "Output",ExpressionUUID->"285f664e-7e67-466a-a068-5ecc17fdc027"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4998, 152, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"e53aa23b-a1af-4b94-af49-9506930a04db"],
+Cell[CellGroupData[{
+Cell[5181, 159, 519, 10, 94, "Input",ExpressionUUID->"a1b01538-b900-4aab-bd50-6b3d7d36908f"],
+Cell[5703, 171, 436, 5, 35, "Output",ExpressionUUID->"0109d507-868c-4711-a805-bbdb35a9cd5c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6176, 181, 631, 18, 31, "Input",ExpressionUUID->"99c9d297-302b-438c-91b7-851141e9c679"],
+Cell[6810, 201, 302, 7, 51, "Output",ExpressionUUID->"a2446210-1f95-469a-a70f-d87cc3153657"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]

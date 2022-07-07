@@ -1,0 +1,63 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1726,         55]
+NotebookOptionsPosition[      1213,         37]
+NotebookOutlinePosition[      1651,         54]
+CellTagsIndexPosition[      1608,         51]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "StringTemplate", "[", 
+   "\"\<Minimize <* RandomInteger[20] *>x+<*RandomInteger[20]*>y subject to \
+the constraints\n\>\"", "]"}], "[", "]"}]], "Input",
+ CellChangeTimes->{{3.866206183399316*^9, 3.8662062799852743`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
+
+Cell[BoxData["\<\"Minimize 5x+5y subject to the constraints\\n\"\>"], "Output",
+ CellChangeTimes->{{3.866206198661309*^9, 3.866206232411559*^9}, 
+   3.8662062648036575`*^9, 3.8662063020446606`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"6fd2d6ab-4002-4119-b5c6-c25047e119b2"]
+}, Open  ]]
+},
+WindowSize->{1141.2, 604.8},
+WindowMargins->{{
+  Automatic, -393.5999999999999}, {-171.5999999999999, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"12f1ff60-9fa1-4ba4-b59b-b0cd4ec24a28"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 338, 7, 48, "Input",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
+Cell[921, 31, 276, 3, 52, "Output",ExpressionUUID->"6fd2d6ab-4002-4119-b5c6-c25047e119b2"]
+}, Open  ]]
+}
+]
+*)
+

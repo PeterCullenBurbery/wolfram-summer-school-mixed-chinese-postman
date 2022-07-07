@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9340,        264]
-NotebookOptionsPosition[      7152,        213]
-NotebookOutlinePosition[      7621,        231]
-CellTagsIndexPosition[      7578,        228]
+NotebookDataLength[     25686,        697]
+NotebookOptionsPosition[     20417,        591]
+NotebookOutlinePosition[     20962,        610]
+CellTagsIndexPosition[     20919,        607]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -208,12 +208,391 @@ Cell[BoxData[
  CellChangeTimes->{3.8662064711747723`*^9, 3.866206611723335*^9},
  CellLabel->"Out[26]=",ExpressionUUID->"a2446210-1f95-469a-a70f-d87cc3153657"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "ExampleSubsection", "21"}, Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{14.960000000000004`, {1.138, 13.822000000000005`}}]],
+  ExpressionUUID->"f9fb827d-ab77-47b1-a266-0e2f8800d761"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"ebf6a70d-d432-4a0d-9fa1-1ade198b3727"],
+ "Traveling Salesman Problem",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "653a6b9a-7587-4713-8cce-aae9ea4ab412"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->1427317128,ExpressionUUID->"5eebf029-ea7f-46fe-ac1a-3130c22bacbd"],
+
+Cell[TextData[{
+ "Find the path that a salesman should take through ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "81aa0bdd-86af-423a-b622-92313f5d4032"],
+ StyleBox[" cities such that each city is only visited once and that \
+minimizes the distance. Generate the locations:",
+  Deletable->True]
+}], "ExampleText",
+ CellID->1676868274,ExpressionUUID->"64586d33-83ee-431b-9476-99529a6f72c7"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pts", " ", "=", " ", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{"CompoundExpression", "[", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["264", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    SeedRandom[123]; RandomReal[10, {$CellContext`n, 2}],
+    SelectWithContents->True,
+    Selectable->False]}], ";"}]}], "Input",
+ CellChangeTimes->{3.8662068977768183`*^9, 3.8662069511748295`*^9},
+ CellLabel->"In[37]:=",
+ CellID->1512237217,ExpressionUUID->"5ae1265e-7dcc-4e43-907e-545ef5103a29"],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["c", 
+    RowBox[{"i", ",", "j"}]], TraditionalForm]], "InlineMath",ExpressionUUID->
+  "7372ba76-5b26-47f3-83f5-8001cc8ef5f0"],
+ " be the distance between city ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "f56f2812-659c-4c26-9370-07dbcdca172c"],
+ " and city ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "254f7381-a76a-4b36-9fc3-bd2a725c6c56"],
+ StyleBox[". Let ",
+  Deletable->True],
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "4644a387-f9e8-4e3b-81ff-716735a05e1d"],
+ StyleBox[" be a decision variable such that if ",
+  Deletable->True],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", 
+     RowBox[{"i", ",", "j"}]], "=", "1"}], TraditionalForm]], "InlineMath",
+  ExpressionUUID->"996c095b-a376-4ab4-b913-d254c3a0b433"],
+ ", the path goes from city ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "c2c0dea1-f978-4e1f-90a7-453d820ac455"],
+ " to city ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]], "InlineMath",ExpressionUUID->
+  "9c520e08-38b1-44fa-8fa2-fc1dcac5ff6a"],
+ ". The objective is to minimize distance:"
+}], "ExampleText",
+ CellID->1153952648,ExpressionUUID->"b605abee-dc2a-4069-8400-615b0bcb9982"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"DistanceMatrix", "[", 
+    RowBox[{"pts", ",", "pts"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"objective", "=", 
+   RowBox[{"Total", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+      RowBox[{"c", ",", "x"}], "]"}], ",", "2"}], "]"}]}], ";"}]}], "Input",
+ CellLabel->"In[39]:=",
+ CellID->731598397,ExpressionUUID->"39463df9-c5f4-4d9b-80dd-774c3a4d5d06"],
+
+Cell["\<\
+The salesman can arrive from exactly one city and can depart to exactly one \
+other city:\
+\>", "ExampleText",
+ CellID->526632405,ExpressionUUID->"b7ec6e71-f6b2-44d7-8d62-3a52cf79c402"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"travelConstraint", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Total", "[", "x", "]"}], "\[Equal]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"Total", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"{", "2", "}"}]}], "]"}], "\[Equal]", "1"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[41]:=",
+ CellID->2053720029,ExpressionUUID->"c93098d9-ca64-4210-a225-57f8f389be59"],
+
+Cell["\<\
+The salesman cannot arrive at one city and depart to the same city:\
+\>", "ExampleText",
+ CellID->778721534,ExpressionUUID->"d332c8f6-57e2-48af-943d-5870d5ca7392"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cityConstraint", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Indexed", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "i"}], "}"}]}], "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellLabel->"In[42]:=",
+ CellID->1975962297,ExpressionUUID->"93851dd0-e3ff-4223-bf31-7e6967bf0297"],
+
+Cell["\<\
+The salesman must travel to all the locations in a single tour:\
+\>", "ExampleText",
+ CellID->1368396514,ExpressionUUID->"df5a5270-b659-414e-84f7-222859127385"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"singleTourConstraint", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"i", "\[Equal]", "j"}], ",", 
+        RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Indexed", "[", 
+           RowBox[{"u", ",", "i"}], "]"}], "-", 
+          RowBox[{"Indexed", "[", 
+           RowBox[{"u", ",", "j"}], "]"}], "+", 
+          RowBox[{"n", "*", 
+           RowBox[{"Indexed", "[", 
+            RowBox[{"x", ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "j"}], "}"}]}], "]"}]}]}], "\[LessEqual]", 
+         RowBox[{"n", "-", "1"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "2", ",", "n"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "2", ",", "n"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[43]:=",
+ CellID->269204625,ExpressionUUID->"e91f2e45-fa20-43c7-9966-8cec5aabe861"],
+
+Cell[TextData[{
+ "The decision variable is a binary variable and the dummy variable is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", 
+     SubscriptBox["u", "i"], "\[LessEqual]", 
+     RowBox[{"n", "-", "1"}]}], ",", 
+    RowBox[{"i", "=", "2"}], ",", "...", ",", "n"}], TraditionalForm]], 
+  "InlineMath",ExpressionUUID->"4290ed5a-a977-41ba-9353-409ece7e8f39"],
+ ":",
+ StyleBox[" ",
+  Deletable->True]
+}], "ExampleText",
+ CellID->676696059,ExpressionUUID->"894afd10-8c4e-410d-9482-114bb142bbb7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"variableConstraint", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"0", "\[VectorLessEqual]", "x", "\[VectorLessEqual]", "1"}], ",", 
+     RowBox[{"0", "\[VectorLessEqual]", "u", "\[VectorLessEqual]", 
+      RowBox[{"n", "-", "1"}]}]}], "}"}]}], ";"}]], "Input",
+ CellLabel->"In[44]:=",
+ CellID->1912610443,ExpressionUUID->"3c21df74-7ff9-48bc-931c-274cbd9baaf5"],
+
+Cell["Find the path that minimizes the distance:", "ExampleText",
+ CellID->897577616,ExpressionUUID->"5b757d58-3413-4da8-8552-0d55b91452c2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"res", "=", 
+   RowBox[{"LinearOptimization", "[", 
+    RowBox[{"objective", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "travelConstraint", ",", "cityConstraint", ",", "\[IndentingNewLine]", 
+       "singleTourConstraint", ",", "variableConstraint"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"u", "\[Element]", 
+        RowBox[{"Vectors", "[", "n", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"x", "\[Element]", 
+        RowBox[{"Matrices", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"n", ",", "n"}], "}"}], ",", "Integers"}], "]"}]}]}], 
+      "}"}]}], "]"}]}], " ", ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Short", "[", 
+  RowBox[{"res", ",", "2"}], "]"}]}], "Input",
+ CellLabel->"In[45]:=",
+ CellID->702668305,ExpressionUUID->"41c9452f-edfb-4437-b0f8-7d971358f8f0"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"u", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0.`", ",", "0.`", ",", "12.00000000000001`", ",", "7.999999999999989`",
+        ",", "18.000000000000004`", ",", 
+       RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+       "16.000000000000007`", ",", "17.000000000000004`", ",", 
+       "0.9999999999999987`", ",", "1.9999999999999973`"}], "}"}]}], ",", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}]}], "}"}],
+  Short[#, 2]& ]], "Output",
+ CellChangeTimes->{3.8662069828968334`*^9},
+ CellLabel->
+  "Out[46]//Short=",ExpressionUUID->"db1971e6-dab1-4f34-9c1a-90e0d5cb0e18"]
+}, Open  ]],
+
+Cell["Extract the path:", "ExampleText",
+ CellID->36606281,ExpressionUUID->"4cb1bdc2-0b7c-4b39-99f6-665d6d03b359"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindCycle", "[", 
+   RowBox[{
+    RowBox[{"AdjacencyGraph", "[", 
+     RowBox[{"x", "/.", "res"}], "]"}], ",", 
+    RowBox[{"{", "n", "}"}]}], "]"}], "\[LeftDoubleBracket]", "1", 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellLabel->"In[47]:=",
+ CellID->2007459722,ExpressionUUID->"fcfd5a76-e4a5-43bc-8929-cc798911709e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"1", "\[DirectedEdge]", "2"}], ",", 
+   RowBox[{"2", "\[DirectedEdge]", "19"}], ",", 
+   RowBox[{"19", "\[DirectedEdge]", "20"}], ",", 
+   RowBox[{"20", "\[DirectedEdge]", "12"}], ",", 
+   RowBox[{"12", "\[DirectedEdge]", "8"}], ",", 
+   RowBox[{"8", "\[DirectedEdge]", "7"}], ",", 
+   RowBox[{"7", "\[DirectedEdge]", "10"}], ",", 
+   RowBox[{"10", "\[DirectedEdge]", "13"}], ",", 
+   RowBox[{"13", "\[DirectedEdge]", "4"}], ",", 
+   RowBox[{"4", "\[DirectedEdge]", "6"}], ",", 
+   RowBox[{"6", "\[DirectedEdge]", "15"}], ",", 
+   RowBox[{"15", "\[DirectedEdge]", "3"}], ",", 
+   RowBox[{"3", "\[DirectedEdge]", "11"}], ",", 
+   RowBox[{"11", "\[DirectedEdge]", "16"}], ",", 
+   RowBox[{"16", "\[DirectedEdge]", "14"}], ",", 
+   RowBox[{"14", "\[DirectedEdge]", "17"}], ",", 
+   RowBox[{"17", "\[DirectedEdge]", "18"}], ",", 
+   RowBox[{"18", "\[DirectedEdge]", "5"}], ",", 
+   RowBox[{"5", "\[DirectedEdge]", "9"}], ",", 
+   RowBox[{"9", "\[DirectedEdge]", "1"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8662069880208178`*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"24827553-3975-4ec2-9889-b474aec80e6a"]
+}, Open  ]],
+
+Cell["The distance traveled is:", "ExampleText",
+ CellID->2017653194,ExpressionUUID->"d507ba39-a5eb-48d7-aca7-15cef816c79b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Activate", "[", 
+  RowBox[{"objective", "/.", "res"}], "]"}]], "Input",
+ CellLabel->"In[48]:=",
+ CellID->1945519057,ExpressionUUID->"ef2e0d38-1a18-489a-8075-1009ef5fca83"],
+
+Cell[BoxData["41.429559550631474`"], "Output",
+ CellChangeTimes->{3.8662069911658278`*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"70e16db2-49b2-4f7d-b2c1-c011de271be0"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["FindShortestTour"]], "paclet:ref/FindShortestTour"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "79c651fa-9282-4671-8eaa-77c4f3538d9c"],
+ " to solve the traveling salesman problem much more efficiently:"
+}], "ExampleText",
+ CellID->1506882148,ExpressionUUID->"d36eaa00-67c9-40d4-abd1-a19b42d62e3b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindShortestTour", "[", "pts", "]"}]], "Input",
+ CellLabel->"In[49]:=",
+ CellID->1996600317,ExpressionUUID->"091b0607-87d7-46fb-9873-a969991394bb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"41.429559550631474`", ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "9", ",", "5", ",", "18", ",", "17", ",", "14", ",", "16", ",", 
+     "11", ",", "3", ",", "15", ",", "6", ",", "4", ",", "13", ",", "10", ",",
+      "7", ",", "8", ",", "12", ",", "20", ",", "19", ",", "2", ",", "1"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8662069956688275`*^9},
+ CellLabel->"Out[49]=",ExpressionUUID->"b74aec20-a562-466b-9fe8-2f640c00ca58"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{832.8, 604.8},
+WindowSize->{1152., 615.6},
 WindowMargins->{{
-  Automatic, -70.79999999999995}, {-19.799999999999955`, Automatic}},
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+TaggingRules-><|"Openers" -> <|"ExampleSubsection" -> <|"21" -> Closed|>|>|>,
 Magnification:>1.1 Inherited,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
@@ -235,7 +614,7 @@ Cell[580, 22, 161, 3, 74, "Section",ExpressionUUID->"0eb279a9-873b-4a18-9438-8e3
 Cell[CellGroupData[{
 Cell[766, 29, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"7c3d70b8-eb5e-4be0-8b92-82b9430f0c3a"],
 Cell[CellGroupData[{
-Cell[949, 36, 519, 10, 73, "Input",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
+Cell[949, 36, 519, 10, 94, "Input",ExpressionUUID->"5c47ef7a-ecfd-478c-a29d-832a000d5931"],
 Cell[1471, 48, 410, 5, 35, "Output",ExpressionUUID->"3661c59d-973e-45fa-8d2c-22be4176b717"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -246,7 +625,7 @@ Cell[2479, 76, 280, 7, 52, "Output",ExpressionUUID->"e0a3f9bc-6946-4102-be8e-1ac
 Cell[CellGroupData[{
 Cell[2808, 89, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"8b9241e5-8c38-4fc5-819e-747806aa6a48"],
 Cell[CellGroupData[{
-Cell[2991, 96, 519, 10, 94, "Input",ExpressionUUID->"b8f505fc-fcfa-4c0e-a462-431e47f52423"],
+Cell[2991, 96, 519, 10, 73, "Input",ExpressionUUID->"b8f505fc-fcfa-4c0e-a462-431e47f52423"],
 Cell[3513, 108, 435, 5, 35, "Output",ExpressionUUID->"cd9726a8-542a-407a-b019-a08bf45f61f3"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -257,13 +636,67 @@ Cell[4618, 138, 331, 8, 52, "Output",ExpressionUUID->"285f664e-7e67-466a-a068-5e
 Cell[CellGroupData[{
 Cell[4998, 152, 158, 3, 27, "SubsubitemNumbered",ExpressionUUID->"e53aa23b-a1af-4b94-af49-9506930a04db"],
 Cell[CellGroupData[{
-Cell[5181, 159, 519, 10, 94, "Input",ExpressionUUID->"a1b01538-b900-4aab-bd50-6b3d7d36908f"],
+Cell[5181, 159, 519, 10, 73, "Input",ExpressionUUID->"a1b01538-b900-4aab-bd50-6b3d7d36908f"],
 Cell[5703, 171, 436, 5, 35, "Output",ExpressionUUID->"0109d507-868c-4711-a805-bbdb35a9cd5c"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[6176, 181, 631, 18, 31, "Input",ExpressionUUID->"99c9d297-302b-438c-91b7-851141e9c679"],
 Cell[6810, 201, 302, 7, 51, "Output",ExpressionUUID->"a2446210-1f95-469a-a70f-d87cc3153657"]
 }, Open  ]]
+}, Open  ]],
+Cell[7139, 212, 1426, 36, 26, "ExampleSubsection",ExpressionUUID->"5eebf029-ea7f-46fe-ac1a-3130c22bacbd",
+ CellID->1427317128],
+Cell[8568, 250, 427, 9, 23, "ExampleText",ExpressionUUID->"64586d33-83ee-431b-9476-99529a6f72c7",
+ CellID->1676868274],
+Cell[8998, 261, 1078, 26, 59, "Input",ExpressionUUID->"5ae1265e-7dcc-4e43-907e-545ef5103a29",
+ CellID->1512237217],
+Cell[10079, 289, 1345, 38, 26, "ExampleText",ExpressionUUID->"b605abee-dc2a-4069-8400-615b0bcb9982",
+ CellID->1153952648],
+Cell[11427, 329, 474, 13, 52, "Input",ExpressionUUID->"39463df9-c5f4-4d9b-80dd-774c3a4d5d06",
+ CellID->731598397],
+Cell[11904, 344, 195, 4, 23, "ExampleText",ExpressionUUID->"b7ec6e71-f6b2-44d7-8d62-3a52cf79c402",
+ CellID->526632405],
+Cell[12102, 350, 429, 13, 31, "Input",ExpressionUUID->"c93098d9-ca64-4210-a225-57f8f389be59",
+ CellID->2053720029],
+Cell[12534, 365, 173, 3, 23, "ExampleText",ExpressionUUID->"d332c8f6-57e2-48af-943d-5870d5ca7392",
+ CellID->778721534],
+Cell[12710, 370, 449, 13, 31, "Input",ExpressionUUID->"93851dd0-e3ff-4223-bf31-7e6967bf0297",
+ CellID->1975962297],
+Cell[13162, 385, 170, 3, 23, "ExampleText",ExpressionUUID->"df5a5270-b659-414e-84f7-222859127385",
+ CellID->1368396514],
+Cell[13335, 390, 1011, 28, 52, "Input",ExpressionUUID->"e91f2e45-fa20-43c7-9966-8cec5aabe861",
+ CellID->269204625],
+Cell[14349, 420, 524, 14, 24, "ExampleText",ExpressionUUID->"894afd10-8c4e-410d-9482-114bb142bbb7",
+ CellID->676696059],
+Cell[14876, 436, 400, 9, 31, "Input",ExpressionUUID->"3c21df74-7ff9-48bc-931c-274cbd9baaf5",
+ CellID->1912610443],
+Cell[15279, 447, 140, 1, 23, "ExampleText",ExpressionUUID->"5b757d58-3413-4da8-8552-0d55b91452c2",
+ CellID->897577616],
+Cell[CellGroupData[{
+Cell[15444, 452, 861, 22, 94, "Input",ExpressionUUID->"41c9452f-edfb-4437-b0f8-7d971358f8f0",
+ CellID->702668305],
+Cell[16308, 476, 729, 18, 50, "Output",ExpressionUUID->"db1971e6-dab1-4f34-9c1a-90e0d5cb0e18"]
+}, Open  ]],
+Cell[17052, 497, 114, 1, 23, "ExampleText",ExpressionUUID->"4cb1bdc2-0b7c-4b39-99f6-665d6d03b359",
+ CellID->36606281],
+Cell[CellGroupData[{
+Cell[17191, 502, 353, 9, 31, "Input",ExpressionUUID->"fcfd5a76-e4a5-43bc-8929-cc798911709e",
+ CellID->2007459722],
+Cell[17547, 513, 1158, 24, 57, "Output",ExpressionUUID->"24827553-3975-4ec2-9889-b474aec80e6a"]
+}, Open  ]],
+Cell[18720, 540, 124, 1, 23, "ExampleText",ExpressionUUID->"d507ba39-a5eb-48d7-aca7-15cef816c79b",
+ CellID->2017653194],
+Cell[CellGroupData[{
+Cell[18869, 545, 195, 4, 31, "Input",ExpressionUUID->"ef2e0d38-1a18-489a-8075-1009ef5fca83",
+ CellID->1945519057],
+Cell[19067, 551, 169, 2, 35, "Output",ExpressionUUID->"70e16db2-49b2-4f7d-b2c1-c011de271be0"]
+}, Open  ]],
+Cell[19251, 556, 453, 12, 31, "ExampleText",ExpressionUUID->"d36eaa00-67c9-40d4-abd1-a19b42d62e3b",
+ CellID->1506882148],
+Cell[CellGroupData[{
+Cell[19729, 572, 171, 3, 31, "Input",ExpressionUUID->"091b0607-87d7-46fb-9873-a969991394bb",
+ CellID->1996600317],
+Cell[19903, 577, 486, 10, 35, "Output",ExpressionUUID->"b74aec20-a562-466b-9fe8-2f640c00ca58"]
 }, Open  ]]
 }, Open  ]]
 }

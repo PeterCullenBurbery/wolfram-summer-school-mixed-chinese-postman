@@ -210,7 +210,7 @@ Cell[BoxData[{
   3.866210549932575*^9}, {3.8662105848375998`*^9, 3.8662106067546015`*^9}, {
   3.866211164177085*^9, 3.8662112026140957`*^9}},
  CellTags->"DefaultContent",
- CellLabel->"In[22]:=",
+ CellLabel->"In[6]:=",
  CellID->24911376,ExpressionUUID->"cb16eff5-3309-4945-88ad-317108e63705"]
 }, Open  ]],
 
@@ -31096,8 +31096,9 @@ Cell["Additional information for the reviewer.", "Text",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{756.6, Automatic},
-WindowMargins->{{Automatic, 162.60000000000002`}, {39, Automatic}},
+WindowSize->{1152, Automatic},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 DockedCells->{
   Cell[
    BoxData[

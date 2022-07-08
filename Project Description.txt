@@ -1,0 +1,6 @@
+I will solve the Chinese postman problem with Mathematica. A mixed graph has directed edges and undirected edges. Mathematica has FindPostmanTour which works for weighted graphs and mixed graphs but not weighted mixed graphs. I will use an algorithm from Arc Routing Problems Methods and Applications section 4.3.2. I will use LinearOptimization to formulate the graph problem in terms of a matrix and then convert the matrix optimization output to a graph formulation. The function will work in small simple cases but does not scale efficiently to large graphs.
+I will apply the function to a mixed graph.
+I will create a paclet for mixed graphs with functionality for manipulating, analyzing, and creating mixed graphs. I will upload the paclet to the Paclet Repository. I will write documentation for the functions.\
+I will have the functions RandomMixedGraph, UndirectedGraphToMixedGraph, EulerizeGraph and the main function FindMixedPostmanTour.
+
+I want to create an extension of RandomMixedGraph which generates a random unweighted mixed graph that generates a random weighted mixed graph named RandomWeightedMixedGraph if I have time.

@@ -1,0 +1,104 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3226,         96]
+NotebookOptionsPosition[      2712,         78]
+NotebookOutlinePosition[      3148,         95]
+CellTagsIndexPosition[      3105,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Euler Circuit Algorithm", "Section",
+ CellChangeTimes->{{3.8666423781786594`*^9, 
+  3.8666423817961884`*^9}},ExpressionUUID->"ba2e56ca-dc53-4e12-a172-\
+23471b3f8bc6"],
+
+Cell["\<\
+This is a graph orientation problem. Please search for the keyword for more \
+details.
+
+This problem determines whether a mixed graph has an eulerian circuit, and \
+asks to print a solution.
+
+1) Instantiate two graphs, G_undirected and G_directed. Storing undirected \
+and directed edges independently.
+2) First freely assign all undirected edges in the graph to be one direction
+3) Then, calculate the in degree and out degree differences of each vertex.
+4) Create two new vertices s, t.
+For each vertex u , indegree[u] > outdegree[u] ,
+Create an edge ( u , t ) = indegree[u] - outdegree[u] .
+
+For each vertex u , indegree[u] < outdegree[u] , Create en edge ( s , u ) = \
+outdegree[u] - indegree[u] . 5) Perform maximum flow from s to t. If total \
+flow equals that going out from s or going into t , Euler Circuit exists. 6) \
+Lastly, merge the flow graph with the directed graph portion. Perform a euler \
+circuit ( DFS ) to print the euler circuit.
+
+Pseudocode as follows : \
+================================================================ // Graph setup
+Original Graph G ;
+Hide all directed edges ;
+Assign all undirected edges a single direction ;
+
+For each vertex v :
+{
+if ( indegree[v] - outdegree[v] > 0 )
+create an edge with ( v , tank ) of capacity ( (indegree[v]-outdegree[v]) / 2 )
+if ( indegree[v] - outdegree[v] < face=\[CloseCurlyDoubleQuote]courier new\
+\[CloseCurlyDoubleQuote]> create an edge with ( source , v ) of capacity ( \
+(outdegree[v]-indegree[v]) / 2 )
+}
+
+total_flow = maximum_flow(G);
+
+if ( total_flow == out_flow(source) || total_flow == in_flow(tank) )
+{// there is eulerian circuit
+Assign the directions of the undirected edges as in the flow graph and merge \
+with the original directed edge only graph.
+Circuit = get_euler_circuit(G);
+print_path(Circuit);
+}\
+\>", "Text",
+ CellChangeTimes->{3.866642383245304*^9, 
+  3.8666424229284515`*^9},ExpressionUUID->"975a8e19-d48a-4fff-825f-\
+48641cf215b3"]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (July 8, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fb01e485-9c35-4c4e-9d1c-fda87a6b7163"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 172, 3, 67, "Section",ExpressionUUID->"ba2e56ca-dc53-4e12-a172-23471b3f8bc6"],
+Cell[755, 27, 1941, 48, 794, "Text",ExpressionUUID->"975a8e19-d48a-4fff-825f-48641cf215b3"]
+}, Open  ]]
+}
+]
+*)
+

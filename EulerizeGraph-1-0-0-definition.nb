@@ -3052,8 +3052,7 @@ Cell["Additional information for the reviewer.", "Text",
 }, Open  ]]
 },
 WindowSize->Automatic,
-WindowMargins->{{
-  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+WindowMargins->{{Automatic, 228.60000000000002`}, {Automatic, 30}},
 WindowTitle->"EulerizeGraph | Definition Notebook",
 TaggingRules->{"CompatibilityTest" -> HoldComplete[
     BinaryDeserialize[
@@ -3207,7 +3206,6 @@ raY=
               Thickness[0.04581818181818182], 
               RGBColor[0.5, 0.5, 0.5, 1.]}, StripOnInput -> False], 
             StyleBox[{
-              
               FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
                 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGJJIGYC4vinF5RuVyo58OlumvteXcIBxj//Pfjx0tky

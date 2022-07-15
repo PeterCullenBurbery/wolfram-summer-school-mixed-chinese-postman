@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19617,        420]
-NotebookOptionsPosition[     18612,        396]
-NotebookOutlinePosition[     19029,        412]
-CellTagsIndexPosition[     18986,        409]
+NotebookDataLength[     10766,        233]
+NotebookOptionsPosition[      9988,        213]
+NotebookOutlinePosition[     10409,        229]
+CellTagsIndexPosition[     10366,        226]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -205,197 +205,14 @@ Cell[BoxData["Graph"], "Output",
  CellLabel->"Out[85]=",ExpressionUUID->"03820b85-0094-45bc-97d0-bcf205e5f6f0"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"EdgeList", "[", "graph", "]"}]], "Input",
- CellChangeTimes->{{3.8669096471447372`*^9, 3.866909649411729*^9}},
- CellLabel->"In[86]:=",ExpressionUUID->"552cba31-d8df-43ac-a82f-c34b63f4425c"],
-
-Cell[BoxData[
- TemplateBox[{
-  "EdgeList", "graph", 
-   "\"A graph object is expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) \
-in \\!\\(\\*RowBox[{\\\"EdgeList\\\", \\\"[\\\", RowBox[{\\\"Graph\\\", \\\"[\
-\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{TemplateBox[List[\\\"\\\\[ScriptCapitalU]\\\", \\\"1\\\"], \
-\\\"IndexedDefault\\\"], \\\",\\\", TemplateBox[List[\\\"\\\\[ScriptCapitalU]\
-\\\", \\\"2\\\"], \\\"IndexedDefault\\\"], \\\",\\\", TemplateBox[List[\\\"\\\
-\\[ScriptCapitalU]\\\", \\\"3\\\"], \\\"IndexedDefault\\\"], \\\",\\\", \
-TemplateBox[List[\\\"\\\\[ScriptCapitalU]\\\", \\\"4\\\"], \\\"IndexedDefault\
-\\\"], \\\",\\\", TemplateBox[List[\\\"\\\\[ScriptCapitalU]\\\", \\\"5\\\"], \
-\\\"IndexedDefault\\\"], \\\",\\\", TemplateBox[List[\\\"\\\\[ScriptCapitalU]\
-\\\", \\\"6\\\"], \\\"IndexedDefault\\\"], \\\",\\\", TemplateBox[List[\\\"\\\
-\\[ScriptCapitalU]\\\", \\\"7\\\"], \\\"IndexedDefault\\\"], \\\",\\\", \
-TemplateBox[List[\\\"\\\\[ScriptCapitalU]\\\", \\\"8\\\"], \\\"IndexedDefault\
-\\\"], \\\",\\\", TemplateBox[List[\\\"\\\\[ScriptCapitalU]\\\", \\\"9\\\"], \
-\\\"IndexedDefault\\\"], \\\",\\\", TemplateBox[List[\\\"\\\\[ScriptCapitalU]\
-\\\", \\\"10\\\"], \\\"IndexedDefault\\\"]}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
-\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"FormatType\\\", \\\"\[Rule]\\\", \
-\\\"TraditionalForm\\\"}], \\\",\\\", RowBox[{\\\"ImageSize\\\", \
-\\\"\[Rule]\\\", \\\"Small\\\"}], \\\",\\\", RowBox[{\\\"EdgeWeight\\\", \\\"\
-\[Rule]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"0.3652224864124398`\\\", \
-\\\",\\\", \\\"0.41443615913099485`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"0.22732212949367203`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"10\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}]}], \\\",\\\", \
-RowBox[{\\\"GraphLayout\\\", \\\"\[Rule]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
-\\\\\\\"Dimension\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"2\\\"}], \\\"}\\\"}]}], \
-\\\",\\\", RowBox[{\\\"ImageSize\\\", \\\"\[Rule]\\\", \\\"Small\\\"}], \\\",\
-\\\", RowBox[{\\\"VertexLabels\\\", \\\"\[Rule]\\\", RowBox[{\\\"{\\\", \
-\\\"Automatic\\\", \\\"}\\\"}]}]}], \\\"}\\\"}]}], \\\"]\\\"}], \
-\\\"]\\\"}]\\).\"", 2, 86, 11, 19444886647061753130, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.866909650078725*^9, 3.8669096676687307`*^9}},
- CellLabel->
-  "During evaluation of \
-In[86]:=",ExpressionUUID->"d1fcdee3-ea0b-4eee-a9bf-77d630ad6783"],
-
-Cell[BoxData[
- RowBox[{"EdgeList", "[", 
-  RowBox[{"Graph", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      TemplateBox[{"\[ScriptCapitalU]", "1"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "2"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "3"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "4"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "5"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "6"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "7"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "8"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "9"},
-       "IndexedDefault"], ",", 
-      TemplateBox[{"\[ScriptCapitalU]", "10"},
-       "IndexedDefault"]}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "1", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "1", ",", "1", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",",
-           "1", ",", "0", ",", "1"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "1", ",", "1", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "1"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "1", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "1", ",", "1", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
-           "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"FormatType", "\[Rule]", "TraditionalForm"}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
-      RowBox[{"EdgeWeight", "\[Rule]", 
-       RowBox[{"{", 
-        RowBox[{
-        "0.3652224864124398`", ",", "0.41443615913099485`", ",", 
-         "0.4046802326617267`", ",", "0.05396824620224594`", ",", 
-         "0.7601090918474911`", ",", "0.5855892868468144`", ",", 
-         "0.14717924634679425`", ",", "0.4669897024155072`", ",", 
-         "0.9144547769379332`", ",", "0.22732212949367203`", ",", 
-         "0.966708951246946`", ",", "0.16883228571166664`", ",", 
-         "0.12129282588011181`", ",", "0.7254802336980597`", ",", 
-         "0.28453622475299123`", ",", "0.7559183855506482`", ",", 
-         "0.5827057682517229`", ",", "0.5783471002251885`", ",", 
-         "0.4014341901778393`", ",", "0.13650859932499215`"}], "}"}]}], ",", 
-      RowBox[{"GraphLayout", "\[Rule]", 
-       RowBox[{"{", 
-        RowBox[{"\<\"Dimension\"\>", "\[Rule]", "2"}], "}"}]}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
-      RowBox[{"VertexLabels", "\[Rule]", 
-       RowBox[{"{", "Automatic", "}"}]}]}], "}"}]}], "]"}], "]"}]], "Output",
- CellChangeTimes->{{3.8669096502437325`*^9, 3.8669096679957285`*^9}},
- CellLabel->"Out[86]=",ExpressionUUID->"feb39402-4c82-47ff-9890-414d2ae9571e"]
-}, Open  ]]
+ RowBox[{"graph", "="}]], "Input",
+ CellChangeTimes->{{3.8669102050722027`*^9, 
+  3.866910205942213*^9}},ExpressionUUID->"30bbfe44-ff8b-4bd2-a831-\
+610cf175d0f9"]
 },
 WindowSize->{619.8, 255.6},
-WindowMargins->{{27.599999999999998`, Automatic}, {0, Automatic}},
+WindowMargins->{{70.8, Automatic}, {-122.39999999999998`, Automatic}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (July 8, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ffd490f1-43ab-4580-91c0-c7353743b454"
@@ -417,11 +234,7 @@ Cell[CellGroupData[{
 Cell[9380, 196, 203, 3, 28, "Input",ExpressionUUID->"f4fbcdd2-32d1-4ed3-9275-b6291df548e4"],
 Cell[9586, 201, 207, 3, 32, "Output",ExpressionUUID->"03820b85-0094-45bc-97d0-bcf205e5f6f0"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[9830, 209, 212, 3, 28, "Input",ExpressionUUID->"552cba31-d8df-43ac-a82f-c34b63f4425c"],
-Cell[10045, 214, 2754, 41, 102, "Message",ExpressionUUID->"d1fcdee3-ea0b-4eee-a9bf-77d630ad6783"],
-Cell[12802, 257, 5794, 136, 337, "Output",ExpressionUUID->"feb39402-4c82-47ff-9890-414d2ae9571e"]
-}, Open  ]]
+Cell[9808, 207, 176, 4, 28, "Input",ExpressionUUID->"30bbfe44-ff8b-4bd2-a831-610cf175d0f9"]
 }
 ]
 *)

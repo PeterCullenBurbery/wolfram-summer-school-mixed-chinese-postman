@@ -78,7 +78,36 @@ Cell[BoxData[{
  CellChangeTimes->{{3.8605097352431335`*^9, 3.860509748765896*^9}},
  CellTags->"DefaultContent",
  CellLabel->"In[24]:=",
- CellID->444679469,ExpressionUUID->"ab655faa-933c-4b04-894b-db02ea3d8a4b"]
+ CellID->444679469,ExpressionUUID->"ab655faa-933c-4b04-894b-db02ea3d8a4b"],
+
+Cell["\<\
+I found an approach that works for undirected weighted graphs to find the \
+minimum:\
+\>", "Text",
+ CellChangeTimes->{{3.867167501955368*^9, 3.867167516364371*^9}},
+ CellID->570721060,ExpressionUUID->"469e2ce5-d7b1-47a6-b885-f6a77e938427"],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "EulerizeGraph", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EulerizeGraph", "[", 
+   RowBox[{"graph_", "?", 
+    RowBox[{"(", "UndirectedGraphQ", ")"}]}], "]"}], ":=", 
+  RowBox[{"EdgeAdd", "[", 
+   RowBox[{"graph", ",", 
+    RowBox[{"FindEdgeCover", "[", 
+     RowBox[{"Subgraph", "[", 
+      RowBox[{"graph", ",", 
+       RowBox[{"VertexList", "[", 
+        RowBox[{"graph", ",", 
+         RowBox[{"x_", "/;", 
+          RowBox[{"OddQ", "@", 
+           RowBox[{"VertexDegree", "[", 
+            RowBox[{"graph", ",", "x"}], "]"}]}]}]}], "]"}]}], "]"}], "]"}]}],
+    "]"}]}]}], "Input",
+ CellChangeTimes->{{3.867167518597374*^9, 3.8671676249483595`*^9}},
+ CellLabel->"In[16]:=",
+ CellID->14480467,ExpressionUUID->"ee1b0286-e77d-4235-89f2-a6e42d9e17dd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -558,9 +587,8 @@ $CellContext`\[ScriptCapitalM], $CellContext`\[ScriptCapitalR]}, {
         0.7]}], {
          DiskBox[{0.880095814601738, 0.013156064124647815}, 
           0.011203619719880126], 
-         InsetBox["\[ScriptCapitalT]", 
-          Offset[{2, 2}, {0.8912994343216182, 0.02435968384452794}], 
-          ImageScaled[{0, 0}],
+         InsetBox["\[ScriptCapitalT]", Offset[{2, 2}, 
+          {0.8912994343216182, 0.02435968384452794}], ImageScaled[{0, 0}],
           BaseStyle->"Graphics"]}, {
          DiskBox[{0.013242690904806398, 0.}, 0.011203619719880126], 
          InsetBox["\[ScriptCapitalL]", 
@@ -3103,7 +3131,7 @@ WyabbVsUI30dbWyR5mC4Y6npzAQV7A7CHW8e0ORJGTUV01ufdzMGR2GbTwVmCj3d8A9cd0NNHoiRcl\
   "1.6.3", "StatusMessage" -> "", 
   "SubmissionReviewData" -> {"Review" -> False}},
 CreateCellID->True,
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (July 16, 2022)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -5356,7 +5384,7 @@ resource except for the definition notebook\""}, "PrettyTooltipTemplate"]],
    Cell[
     StyleData["DockedCell"], CellFrameColor -> GrayLevel[0.75], Background -> 
     GrayLevel[0.9]]}, Visible -> False, FrontEndVersion -> 
-  "13.1 for Microsoft Windows (64-bit) (June 16, 2022)", StyleDefinitions -> 
+  "13.2 for Microsoft Windows (64-bit) (July 16, 2022)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"ad64b22c-4c8f-4c56-818f-9939de7482c3"
 ]
